@@ -1,5 +1,7 @@
 const ins = document.querySelector("#in");
+
 const out = document.querySelector("#out");
+
 const msg = document.querySelector("#msgs");
 const cls = {
     a: { from:"00000000", to:"01111110" },
@@ -47,7 +49,7 @@ let dec2bin = (ip) => {
 	let oct = ip.split(".");
 	let oLen = oct.length;
 	if (oLen < 4)
-		setMsg("error", "podano tylko "+oLen+" oktety");
+		setMsg("error", "podano "+oLen+" oktety");
 	else
 		setMsg("clean");
 
@@ -61,7 +63,7 @@ let dec2bin = (ip) => {
 			let bLen = bin.length;
 			binOct += (bLen < 8) ? strPad(bLen, bin) : bin;
 		} else {
-			setMsg("error", "wartosc poza zakresem w oktescie "+i);
+			setMsg("error", "wartosc poza zakresem "+i);
 		}
 	}
 
